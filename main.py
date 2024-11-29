@@ -1,5 +1,5 @@
 import torch
-
+import pandas as pd
 import torch
 
 # Tworzenie przykładowych macierzy
@@ -21,3 +21,13 @@ print("Mnożenie macierzy A * B^T:\n", E)
 # Transpozycja macierzy
 F = A.T
 print("Transpozycja macierzy A:\n", F)
+
+file_path_test = './datasets/test.csv'
+file_path_train = './datasets/train.csv'
+file_path_sample = './datasets/sample_submission.csv'
+
+
+
+test_df = pd.read_csv(file_path_test)
+train_df = pd.read_csv(file_path_train)
+sample_submission_df = pd.read_csv(file_path_sample)
